@@ -1,11 +1,9 @@
- 
 <p align="center">
 <img src="https://muyao1987.gitee.io/cdn/mars3d.cn/logo.png" width="300px" />
 </p>
 
 
-<p align="center">基于electron技术栈的 CS桌面程序 Mars3D🌎最简项目模板</p>
-
+<p align="center">基于Vue3.x + Vite2 + Electron 技术栈的 Mars3D🌎CS桌面程序项目模板</p>
 
 <p align="center">
 <a target="_black" href="https://github.com/marsgis/mars3d">
@@ -19,15 +17,48 @@
 </a>
 </p>
 
+ Mars3D平台基于`Vue3.x ` 、 `Vite ` 和 `Electron` 的最简的CS应用项目模版，可以使用该模板建立自己的CS桌面版三维地球程序。
 
   
-| 目录  |  说明  | 
-|  ----  | ----  |
-|[mars3d-electron-vue3](./mars3d-electron-vue3/README.md)	  | 【推荐】 基于vue3的electron项目模板|  
-|[mars3d-electron-vue2](./mars3d-electron-vue2/README.md)	 | 基于vue2的electron项目模板| 
 
+
+##  首次运行前安装依赖
+```
+npm install
+```
+
+##  CS桌面程序访问
+
+### 编译并热部署的Electron开发环境 (Compiles and hot-reloads for Electron development)
+```
+npm run dev 
+```
+
+### 编译并压缩的Electron生产环境 (Compiles and minifies for Electron production)
+```
+npm run build
+```
+
+
+
+##  BS浏览器访问
+
+### 编译并热部署的web浏览器开发环境 (Compiles and hot-reloads for development)
+```
+npm run dev:vue
+```
+
+### 编译并压缩的web浏览器生产环境 (Compiles and minifies for production)
+```
+npm run build:vue
+```
 
  
+##  常见问题
+
+### npm安装是electron总是超时
+删除package.json中electron包，通过npm install安装成功后，再恢复electron包，通过cnpm install安装完成。
+
 
 
 
