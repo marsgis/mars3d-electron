@@ -1,6 +1,8 @@
 .DS_Store
 node_modules
-/dist
+dist/
+build/
+!build/icons
 lib/CesiumUnminified/
 mars3d-*src.*
 
