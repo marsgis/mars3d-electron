@@ -5,16 +5,20 @@
 <p align="center">基于Vue3.x + Vite2 + Electron 技术栈的 Mars3D🌎CS桌面程序项目模板</p>
 
 <p align="center">
-<a target="_black" href="https://github.com/marsgis/mars3d">
-<img alt="GitHub stars" src="https://img.shields.io/github/stars/marsgis/mars3d?style=flat&logo=github">
-</a>
-<a target="_black" href="https://www.npmjs.com/package/mars3d">
-<img alt="Npm downloads" src="https://img.shields.io/npm/dt/mars3d?style=flat&logo=npm">
-</a>
-<a target="_black" href="https://www.npmjs.com/package/mars3d">
-<img alt="Npm version" src="https://img.shields.io/npm/v/mars3d.svg?style=flat&logo=npm&label=version"/>
-</a>
+  <a target="_black" href="https://www.npmjs.com/package/mars3d">
+    <img alt="Npm version" src="https://img.shields.io/npm/v/mars3d.svg?style=flat&logo=npm&label=版本号" />
+  </a>
+  <a target="_black" href="https://www.npmjs.com/package/mars3d">
+    <img alt="Npm downloads" src="https://img.shields.io/npm/dt/mars3d?style=flat&logo=npm&label=下载量" />
+  </a>
+  <a target="_black" href="https://github.com/marsgis/mars3d">
+    <img alt="GitHub stars" src="https://img.shields.io/github/stars/marsgis/mars3d?style=flat&logo=github" />
+  </a>
+  <a target="_black" href="https://gitee.com/marsgis/mars3d">
+    <img src="https://gitee.com/marsgis/mars3d/badge/star.svg?theme=dark" alt="star" />
+  </a>
 </p>
+
 
 Mars3D 平台基于`Vue3.x ` 、 `Vite ` 和 `Electron` 的最简的 CS 应用项目模版，可以使用该模板建立自己的 CS 桌面版三维地球程序。
 
