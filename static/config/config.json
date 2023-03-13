@@ -57,11 +57,11 @@
       }
     },
     "templateValues": {
-      "dataServer": "//data.mars3d.cn",
-      "gltfServerUrl": "//data.mars3d.cn/gltf"
+      "dataServer": "https://data.mars3d.cn",
+      "gltfServerUrl": "https://data.mars3d.cn/gltf"
     },
     "terrain": {
-      "url": "//data.mars3d.cn/terrain",
+      "url": "https://data.mars3d.cn/terrain",
       "show": true
     },
     "basemaps": [
