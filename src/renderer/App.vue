@@ -9,6 +9,7 @@ const configUrl = "config/config.json";
 const mars3d = window.mars3d;
 
 const Cesium = mars3d.Cesium;
+// console.log(mars3d, Cesium);
 
 const marsOnload = (map: any) => {
   const graphicLayer = new mars3d.layer.GraphicLayer();
@@ -35,8 +36,8 @@ const marsOnload = (map: any) => {
         if (graphic) {
           graphicLayer.removeGraphic(graphic);
         }
-      },
-    },
+      }
+    }
   ]);
 
   // 加一些演示数据，来源 http://mars3d.cn/editor-vue.html?id=layer-graphic/basis/entity
@@ -72,9 +73,9 @@ const demoData = {
         outlineWidth: 2,
         horizontalOrigin: Cesium.HorizontalOrigin.CENTER,
         verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
-        visibleDepth: false,
+        visibleDepth: false
       },
-      attr: { remark: "示例1" },
+      attr: { remark: "示例1" }
     });
     graphicLayer.addGraphic(graphic);
   },
@@ -86,9 +87,9 @@ const demoData = {
         pixelSize: 10,
         outline: true,
         outlineColor: "#ffffff",
-        outlineWidth: 2,
+        outlineWidth: 2
       },
-      attr: { remark: "示例2" },
+      attr: { remark: "示例2" }
     });
     graphicLayer.addGraphic(graphic);
   },
@@ -101,9 +102,9 @@ const demoData = {
         scale: 1,
         horizontalOrigin: Cesium.HorizontalOrigin.CENTER,
         verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
-        clampToGround: true,
+        clampToGround: true
       },
-      attr: { remark: "示例3" },
+      attr: { remark: "示例3" }
     });
     graphicLayer.addGraphic(graphic);
   },
@@ -116,10 +117,10 @@ const demoData = {
         materialType: mars3d.MaterialType.Image2,
         materialOptions: {
           image: "img/textures/poly-rivers.png",
-          transparent: true,
-        },
+          transparent: true
+        }
       },
-      attr: { remark: "示例4" },
+      attr: { remark: "示例4" }
     });
     graphicLayer.addGraphic(graphic);
   },
@@ -133,9 +134,9 @@ const demoData = {
         opacity: 0.9,
         heading: 45,
         roll: 45,
-        pitch: 0,
+        pitch: 0
       },
-      attr: { remark: "示例5" },
+      attr: { remark: "示例5" }
     });
     graphicLayer.addGraphic(graphic);
   },
@@ -149,10 +150,10 @@ const demoData = {
         outline: true,
         outlineWidth: 3,
         outlineColor: "#ffffff",
-        clampToGround: true,
+        clampToGround: true
       },
       popup: "直接传参的popup",
-      attr: { remark: "示例6" },
+      attr: { remark: "示例6" }
     });
     graphicLayer.addGraphic(graphic);
   },
@@ -164,10 +165,10 @@ const demoData = {
         topRadius: 0.0,
         bottomRadius: 1300.0,
         color: "#00FFFF",
-        opacity: 0.7,
+        opacity: 0.7
       },
       popup: "直接传参的popup",
-      attr: { remark: "示例7" },
+      attr: { remark: "示例7" }
     });
     graphicLayer.addGraphic(graphic);
   },
@@ -178,9 +179,9 @@ const demoData = {
         radii: new Cesium.Cartesian3(1500.0, 1500.0, 1500.0),
         color: "rgba(255,0,0,0.5)",
         outline: true,
-        outlineColor: "rgba(255,255,255,0.3)",
+        outlineColor: "rgba(255,255,255,0.3)"
       },
-      attr: { remark: "示例8" },
+      attr: { remark: "示例8" }
     });
     graphicLayer.addGraphic(graphic);
   },
@@ -191,9 +192,9 @@ const demoData = {
       style: {
         url: "//data.mars3d.cn/gltf/mars/firedrill/xiaofangyuan-run.gltf",
         scale: 16,
-        minimumPixelSize: 100,
+        minimumPixelSize: 100
       },
-      attr: { remark: "示例9" },
+      attr: { remark: "示例9" }
     });
     graphicLayer.addGraphic(graphic);
   },
@@ -202,13 +203,13 @@ const demoData = {
       positions: [
         [116.5, 30.9, 1000],
         [116.52, 30.91, 1000],
-        [116.53, 30.89, 1000],
+        [116.53, 30.89, 1000]
       ],
       style: {
         width: 5,
-        color: "#3388ff",
+        color: "#3388ff"
       },
-      attr: { remark: "示例10" },
+      attr: { remark: "示例10" }
     });
     graphicLayer.addGraphic(graphic); // 还可以另外一种写法: graphic.addTo(graphicLayer)
   },
@@ -217,15 +218,15 @@ const demoData = {
       positions: [
         [116.1, 30.8, 1000],
         [116.12, 30.81, 1000],
-        [116.13, 30.79, 1000],
+        [116.13, 30.79, 1000]
       ],
       style: {
         shape: "pipeline",
         radius: 80,
         color: "#3388ff",
-        opacity: 0.9,
+        opacity: 0.9
       },
-      attr: { remark: "示例11" },
+      attr: { remark: "示例11" }
     });
     graphicLayer.addGraphic(graphic); // 还可以另外一种写法: graphic.addTo(graphicLayer)
   },
@@ -235,13 +236,13 @@ const demoData = {
         [116.2, 30.8, 1000],
         [116.22, 30.81, 1000],
         [116.23, 30.79, 1000],
-        [116.247328, 30.806077, 610.41],
+        [116.247328, 30.806077, 610.41]
       ],
       style: {
         width: 500,
-        color: "#3388ff",
+        color: "#3388ff"
       },
-      attr: { remark: "示例12" },
+      attr: { remark: "示例12" }
     });
     graphicLayer.addGraphic(graphic); // 还可以另外一种写法: graphic.addTo(graphicLayer)
   },
@@ -251,7 +252,7 @@ const demoData = {
         [116.3, 30.8, 1000],
         [116.31, 30.81, 1000],
         [116.334639, 30.800735, 721.39],
-        [116.32, 30.79, 1000],
+        [116.32, 30.79, 1000]
       ],
       style: {
         closure: true,
@@ -262,10 +263,10 @@ const demoData = {
           image: "img/textures/fence.png",
           color: "#00ff00",
           speed: 10,
-          axisY: true,
-        },
+          axisY: true
+        }
       },
-      attr: { remark: "示例13" },
+      attr: { remark: "示例13" }
     });
     graphicLayer.addGraphic(graphic); // 还可以另外一种写法: graphic.addTo(graphicLayer)
   },
@@ -273,16 +274,16 @@ const demoData = {
     const graphic = new mars3d.graphic.RectangleEntity({
       positions: [
         [116.383144, 30.819978, 444.42],
-        [116.42216, 30.793431, 1048.07],
+        [116.42216, 30.793431, 1048.07]
       ],
       style: {
         color: "#3388ff",
         opacity: 0.5,
         outline: true,
         outlineWidth: 3,
-        outlineColor: "#ffffff",
+        outlineColor: "#ffffff"
       },
-      attr: { remark: "示例14" },
+      attr: { remark: "示例14" }
     });
     graphicLayer.addGraphic(graphic); // 还可以另外一种写法: graphic.addTo(graphicLayer)
   },
@@ -292,7 +293,7 @@ const demoData = {
         [116.510278, 30.834372, 567.29],
         [116.530085, 30.809331, 448.31],
         [116.507367, 30.788551, 98.21],
-        [116.472468, 30.823091, 677.39],
+        [116.472468, 30.823091, 677.39]
       ],
       style: {
         materialType: mars3d.MaterialType.Water,
@@ -303,13 +304,13 @@ const demoData = {
           amplitude: 5.0, // 控制水波振幅的数字。
           specularIntensity: 0.8, // 控制镜面反射强度的数字。
           baseWaterColor: "#006ab4", // rgba颜色对象基础颜色的水。#00ffff,#00baff,#006ab4
-          blendColor: "#006ab4", // 从水中混合到非水域时使用的rgba颜色对象。
-        },
+          blendColor: "#006ab4" // 从水中混合到非水域时使用的rgba颜色对象。
+        }
       },
-      attr: { remark: "示例15" },
+      attr: { remark: "示例15" }
     });
     graphicLayer.addGraphic(graphic); // 还可以另外一种写法: graphic.addTo(graphicLayer)
-  },
+  }
 };
 </script>
 
