@@ -2,7 +2,7 @@
 <img src="//mars3d.cn/logo.png" width="300px" />
 </p>
 
-<p align="center">基于Vue3.x + Vite2 + Electron 技术栈的 Mars3D🌎CS桌面程序项目模板</p>
+<p align="center">基于Vue3 + Vite + Electron 技术栈的 Mars3D🌎CS桌面程序项目模板</p>
 
 <p align="center">
   <a target="_black" href="https://www.npmjs.com/package/mars3d">
@@ -26,41 +26,38 @@ Mars3D 平台基于`Vue3.x ` 、 `Vite ` 和 `Electron` 的最简的 CS 应用�
 
 > 请确保您的 node 版本大于等于 16.
 
+
+### Install
+
 ```bash
-npm config edit
-# 该命令会打开npm的配置文件，请在空白处添加，记得去除#号
-# electron_builder_binaries_mirror=https://npmmirror.com/mirrors/electron-builder-binaries/
-# electron_custom_dir={{ version }}
-# electron_mirror=https://cdn.npmmirror.com/binaries/electron/v
-# registry=https://registry.npmmirror.com/
-# 然后关闭该窗口，重启命令行.
-
-# 使用yarn安装
-yarn or yarn install
-
-# 启动之后，会在9080端口监听
-yarn dev
-
-# build命令在不同系统环境中，需要的的不一样，需要自己根据自身环境进行配置
-yarn build
-
+$ npm install
 ```
 
-## 常见问题
+### Development
 
-### npm 安装是 electron 总是超时
+```bash
+$ npm run dev
+```
 
-删除 package.json 中 electron 包，通过 npm install 安装成功后，再恢复 electron 包，通过 cnpm install 安装完成。
+### Build
+
+```bash
+# For windows
+$ npm run build:win
+
+# For macOS
+$ npm run build:mac
+
+# For Linux
+$ npm run build:linux
+```
 
 
 
 
-## 参考了仓库
-- [electron-vite-template](https://gitee.com/Zh-Sky/electron-vite-template)
 
-
-
-
+## 参考资料
+- [electron-vite](https://cn.electron-vite.org/)
 
 
 
