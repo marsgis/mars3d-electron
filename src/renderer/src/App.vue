@@ -9,7 +9,7 @@ import MarsMap from './components/mars-work/mars-map.vue'
 
 const configUrl = 'config/config.json'
 
-const mars3d = window.mars3d
+import * as mars3d from 'mars3d'
 
 const Cesium = mars3d.Cesium
 // console.log(mars3d, Cesium);
@@ -33,7 +33,7 @@ const marsOnload = (map: any) => {
   graphicLayer.bindContextMenu([
     {
       text: '删除对象',
-      iconCls: 'fa fa-trash-o',
+      icon: 'fa fa-trash-o',
       callback: function (e: any) {
         const graphic = e.graphic
         if (graphic) {

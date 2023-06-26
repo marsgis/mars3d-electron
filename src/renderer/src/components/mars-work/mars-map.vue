@@ -7,61 +7,46 @@
  * @copyright 火星科技 mars3d.cn
  * @author 木遥 2022-02-19
  */
-import { computed, onUnmounted, onMounted } from "vue";
-// import * as mars3d from "mars3d"
+import { computed, onUnmounted, onMounted } from 'vue'
 // import { $alert, $message } from "@mars/components/mars-ui/index"
-const mars3d = window.mars3d;
-// console.log(mars3d, "----------------------------------------");
+
+//导入mars3d主库
+import 'mars3d/dist/mars3d.css'
+import * as mars3d from 'mars3d'
 
 const props = withDefaults(
   defineProps<{
-    url: string;
-    mapKey?: string;
-    options?: any;
+    url: string
+    mapKey?: string
+    options?: any
   }>(),
   {
-    url: "",
-    mapKey: "default",
+    url: '',
+    mapKey: 'default',
     options: () => ({})
   }
-);
+)
 
 // 用于存放地球组件实例
-let map; // 地图对象
+let map // 地图对象
 
 // 使用用户传入的 mapKey 拼接生成 withKeyId 作为当前显示容器的id
-const withKeyId = computed(() => `mars3d-container-${props.mapKey}`);
+const withKeyId = computed(() => `mars3d-container-${props.mapKey}`)
 
 onMounted(() => {
   // 获取配置
   mars3d.Util.fetchJson({ url: props.url }).then((data: any) => {
-    console.log(
-      {
-        // 合并配置项
-        ...data.map3d
-        // ...props.options
-      },
-      "合并配置项"
-    );
-    var mapOptions = {
-      basemaps: [{ name: "天地图", type: "tdt", layer: "img_d", show: true }]
-    };
     initMars3d({
-      // 合并配置项
-      // ...mapOptions,
       ...data.map3d,
       ...props.options
-    });
-  });
-});
+    })
+  })
+})
 
 // onload事件将在地图渲染后触发
-const emit = defineEmits(["onload"]);
+const emit = defineEmits(['onload'])
 const initMars3d = (option: any) => {
-  console.log(1);
-
-  map = new mars3d.Map(withKeyId.value, option);
-  console.log(2);
+  map = new mars3d.Map(withKeyId.value, option)
 
   // //如果有xyz传参，进行定位
   // const lat = getQueryString("lat")
@@ -75,26 +60,26 @@ const initMars3d = (option: any) => {
 
   // 针对不同终端的优化配置
   if (mars3d.Util.isPCBroswer()) {
-    map.zoomFactor = 2.0; // 鼠标滚轮放大的步长参数
+    map.zoomFactor = 2.0 // 鼠标滚轮放大的步长参数
 
     // IE浏览器优化
-    if (window.navigator.userAgent.toLowerCase().indexOf("msie") >= 0) {
-      map.viewer.targetFrameRate = 20; // 限制帧率
-      map.scene.requestRenderMode = false; // 取消实时渲染
+    if (window.navigator.userAgent.toLowerCase().indexOf('msie') >= 0) {
+      map.viewer.targetFrameRate = 20 // 限制帧率
+      map.scene.requestRenderMode = false // 取消实时渲染
     }
   } else {
-    map.zoomFactor = 5.0; // 鼠标滚轮放大的步长参数
+    map.zoomFactor = 5.0 // 鼠标滚轮放大的步长参数
 
     // 移动设备上禁掉以下几个选项，可以相对更加流畅
-    map.scene.requestRenderMode = false; // 取消实时渲染
-    map.scene.fog.enabled = false;
-    map.scene.skyAtmosphere.show = false;
-    map.scene.globe.showGroundAtmosphere = false;
+    map.scene.requestRenderMode = false // 取消实时渲染
+    map.scene.fog.enabled = false
+    map.scene.skyAtmosphere.show = false
+    map.scene.globe.showGroundAtmosphere = false
   }
 
   // //二三维切换不用动画
   if (map.viewer.sceneModePicker) {
-    map.viewer.sceneModePicker.viewModel.duration = 0.0;
+    map.viewer.sceneModePicker.viewModel.duration = 0.0
   }
 
   // webgl渲染失败后，刷新页面
@@ -104,10 +89,10 @@ const initMars3d = (option: any) => {
   // })
 
   // map构造完成后的一些处理
-  onMapLoad();
+  onMapLoad()
 
-  emit("onload", map);
-};
+  emit('onload', map)
+}
 
 // map构造完成后的一些处理
 function onMapLoad() {
@@ -126,11 +111,11 @@ function onMapLoad() {
 // 组件卸载之前销毁mars3d实例
 onUnmounted(() => {
   if (map) {
-    map.destroy();
-    map = null;
+    map.destroy()
+    map = null
   }
-  console.log("map销毁完成", map);
-});
+  console.log('map销毁完成', map)
+})
 </script>
 
 <style>
