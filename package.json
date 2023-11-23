@@ -47,10 +47,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/marsgis/mars3d-vue-template.git"
+    "url": "https://github.com/marsgis/mars3d-electron.git"
   },
   "bugs": {
-    "url": "https://github.com/marsgis/mars3d-vue-template/issues",
+    "url": "https://github.com/marsgis/mars3d-electron/issues",
     "email": "wh@marsgis.cn"
   },
   "keywords": [
