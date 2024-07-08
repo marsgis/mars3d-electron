@@ -60,6 +60,15 @@ $ npm run build:linux
 - [electron-vite](https://cn.electron-vite.org/)
 
 
+## 常见问题
+
+### 1. 在初次运行打包命令的时候，下载 electron-v31.1.0-win32-x64 等文件失败
+
+解决办法：直接在淘宝的文件库下载对应版本和打包平台的文件，下载完成后放在`C:\Users\Administrator\AppData\Local\electron\Cache`目录下即可，
+
+
+
+
 
 
 ## Mars3D 是什么

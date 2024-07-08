@@ -1,7 +1,7 @@
 import { resolve } from 'path'
 import { defineConfig, externalizeDepsPlugin } from 'electron-vite'
 import vue from '@vitejs/plugin-vue'
-import { mars3dPlugin } from 'vite-plugin-mars3d'
+// import { mars3dPlugin } from 'vite-plugin-mars3d'
 
 export default defineConfig({
   main: {
@@ -16,6 +16,7 @@ export default defineConfig({
         '@renderer': resolve('src/renderer/src')
       }
     },
-    plugins: [vue(), mars3dPlugin()]
+    plugins: [vue()]
+    // plugins: [vue(), mars3dPlugin()]
   }
 })

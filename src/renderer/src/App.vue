@@ -9,8 +9,8 @@ import MarsMap from './components/mars-work/mars-map.vue'
 
 const configUrl = 'config/config.json'
 
-import * as mars3d from 'mars3d'
-
+// import * as mars3d from 'mars3d'
+const mars3d = window.mars3d
 const Cesium = mars3d.Cesium
 // console.log(mars3d, Cesium);
 
