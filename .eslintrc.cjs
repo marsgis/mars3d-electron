@@ -2,17 +2,11 @@
 require('@rushstack/eslint-patch/modern-module-resolution')
 
 module.exports = {
-  root: true,
-  env: {
-    browser: true,
-    commonjs: true,
-    es6: true,
-    node: true,
-    'vue/setup-compiler-macros': true
-  },
   extends: [
-    'plugin:vue/vue3-recommended',
     'eslint:recommended',
+    'plugin:vue/vue3-recommended',
+    '@electron-toolkit',
+    '@electron-toolkit/eslint-config-ts/eslint-recommended',
     '@vue/eslint-config-typescript/recommended',
     '@vue/eslint-config-prettier'
   ],
@@ -26,13 +20,5 @@ module.exports = {
     '@typescript-eslint/no-var-requires': 'off',
     'vue/require-default-prop': 'off',
     'vue/multi-word-component-names': 'off'
-  },
-  overrides: [
-    {
-      files: ['*.js'],
-      rules: {
-        '@typescript-eslint/explicit-function-return-type': 'off'
-      }
-    }
-  ]
+  }
 }

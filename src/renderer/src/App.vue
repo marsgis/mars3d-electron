@@ -1,10 +1,10 @@
 <template>
-  <Versions></Versions>
-
   <MarsMap :url="configUrl" map-key="test" @onload="marsOnload" />
+  <!-- <Versions /> -->
 </template>
+
 <script setup lang="ts">
-import Versions from './components/Versions.vue'
+// import Versions from './components/Versions.vue'
 import MarsMap from './components/mars-work/mars-map.vue'
 
 const configUrl = 'config/config.json'
@@ -316,7 +316,3 @@ const demoData = {
   }
 }
 </script>
-
-<style lang="less">
-@import './assets/css/styles.less';
-</style>
