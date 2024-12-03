@@ -12,7 +12,7 @@ import { computed, onUnmounted, onMounted } from 'vue'
 
 //导入mars3d主库
 // import 'mars3d-cesium/Build/Cesium/Widgets/widgets.css' //依赖的cesium库本身css
-// import 'mars3d/dist/mars3d.css'
+// import 'mars3d/mars3d.css'
 // import * as mars3d from 'mars3d'
 
 const mars3d = window.mars3d
