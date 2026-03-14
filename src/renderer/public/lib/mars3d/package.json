@@ -6,7 +6,7 @@
 	"types": "./mars3d.d.ts",
 	"peerDependencies": {
 		"@turf/turf": "^7.2.0",
-		"mars3d-cesium": "~1.138.0"
+		"mars3d-cesium": "~1.139.0"
 	},
 	"devDependencies": {},
 	"scripts": {},
