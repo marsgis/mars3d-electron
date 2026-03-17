@@ -1,10 +1,10 @@
 /**
  * Mars3D三维可视化平台  mars3d
  *
- * 版本信息：v3.9.0
- * 编译日期：2025-02-15 11:07
- * 版权所有：Copyright by 火星科技  http://mars3d.cn
- * 使用单位：火星科技免费公开版 ，2025-02-01
+ * 版本信息：v3.11.1
+ * 编译日期：2026-03-17 15:13
+ * 版权所有：Copyright by http://mars3d.cn
+ * 使用单位：免费公开版 ，2026-02-01
  */
 
 /**地球容器div*/
@@ -80,6 +80,9 @@
   top: 0;
   left: 0;
 }
+.mars3d-contextmenu-ul .mars3d-contextmenu-item ::marker {
+  content: "";
+}
 .mars3d-contextmenu-ul .mars3d-contextmenu-line {
   position: absolute;
   left: 2%;
@@ -140,7 +143,7 @@
   min-width: 100px;
   padding: 2px 5px;
   font-size: 11px;
-  z-index: 1000;
+  z-index: 20170825;
   opacity: 0.8;
   -khtml-opacity: 0.8;
   -moz-opacity: 0.8;
@@ -385,7 +388,7 @@
   .cesium-performanceDisplay-ms,
   .cesium-performanceDisplay-fps,
   .mars3d-locationbar-content > .hide1000 {
-    display: none;
+    display: none !important;
   }
   .mars3d-locationbar-content > div {
     margin-right: 10px;
@@ -393,12 +396,12 @@
 }
 @media screen and (max-width: 700px) {
   .mars3d-locationbar-content > .hide700 {
-    display: none;
+    display: none !important;
   }
 }
 @media screen and (max-width: 600px) {
   .mars3d-locationbar {
-    display: none;
+    display: none !important;
   }
 }
 .mars3d-slider {
@@ -903,7 +906,6 @@
 }
 .mars3d-popup-content {
   margin: 10px;
-  line-height: 1.4;
   font-size: 13px;
   max-width: 700px;
   min-width: 50px;
@@ -1020,6 +1022,10 @@
 }
 .mars3d-template-content textarea::placeholder {
   color: #cdcdcd;
+}
+.mars3d-popup-iframe {
+  overflow: auto;
+  margin: 0;
 }
 /*****tooltip弹出框样式******/
 .mars3d-tooltip {
@@ -1205,9 +1211,9 @@
 /** 按钮工具栏修改定位："top-left"上侧靠左 */
 .cesium-viewer-toolbar-top-left {
   top: 10px;
-  bottom: auto;
+  bottom: auto !important;
   left: 10px;
-  right: auto;
+  right: auto !important;
   /**帮助 弹出面板*/
   /**底图切换 弹出面板*/
 }
@@ -1221,9 +1227,9 @@
 /** 修改定位："left-top"左侧靠上 */
 .cesium-viewer-toolbar-left-top {
   top: 10px;
-  bottom: auto;
+  bottom: auto !important;
   left: 10px;
-  right: auto;
+  right: auto !important;
   /**底图切换 弹出面板*/
   /**帮助 弹出面板*/
   /**二维三维切换*/
@@ -1259,10 +1265,10 @@
 }
 /** 修改定位："left-bottom"左侧靠下 */
 .cesium-viewer-toolbar-left-bottom {
-  top: auto;
+  top: auto !important;
   bottom: 60px;
   left: 10px;
-  right: auto;
+  right: auto !important;
   /**底图切换 弹出面板*/
   /**帮助 弹出面板*/
   /**二维三维切换*/
@@ -1301,9 +1307,9 @@
 /** 修改定位："right-top"右侧靠上 */
 .cesium-viewer-toolbar-right-top {
   top: 10px;
-  bottom: auto;
+  bottom: auto !important;
   right: 10px;
-  left: auto;
+  left: auto !important;
   /**底图切换 弹出面板*/
   /**帮助 弹出面板*/
   /**二维三维切换*/
@@ -1340,10 +1346,10 @@
 }
 /** 修改定位："right-bottom"右侧靠下 */
 .cesium-viewer-toolbar-right-bottom {
-  top: auto;
+  top: auto !important;
   bottom: 60px;
   right: 10px;
-  left: auto;
+  left: auto !important;
   /**底图切换 弹出面板*/
   /**帮助 弹出面板*/
   /**二维三维切换*/

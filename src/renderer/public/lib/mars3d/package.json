@@ -6,7 +6,7 @@
 	"types": "./mars3d.d.ts",
 	"peerDependencies": {
 		"@turf/turf": "^7.2.0",
-		"mars3d-cesium": "~1.139.0"
+		"mars3d-cesium": "^1.131.0"
 	},
 	"devDependencies": {},
 	"scripts": {},
@@ -27,7 +27,7 @@
 		"3dgis",
 		"webgis"
 	],
-	"author": "火星科技",
+	"author": "mars3d团队",
 	"license": "Apache-2.0",
 	"homepage": "http://mars3d.cn",
 	"build": {
